@@ -26,10 +26,16 @@ The purpose of this document is to guide users through the necessary prerequisit
 
 
 
-## Prerequisites
+### Prerequisites
 
-Before you can run the `paul_born_ocr` project, you'll need to set up your development environment with the necessary software. Follow the steps below:
+Before proceeding with the setup, ensure that you have the following files in a folder named **`paul_born_ocr`** located in your **Downloads** directory:
 
+- `environment.yml`
+- `utils.py`
+- `paul_born_ocr.py`
+- `imgs/`
+
+You can download these files from the GitHub repository or from the **Born-Moser, Paul** directory on the **Google Drive** of the entomological collection.
 ### 1. Install PyCharm Community Edition
 PyCharm is an Integrated Development Environment (IDE) that makes it easier to manage your Python projects. Download and install **PyCharm Community Edition** from the official JetBrains website:
 
@@ -48,7 +54,7 @@ Tesseract is an open-source OCR engine that `pytesseract` relies on. You need to
 #### Steps:
 1. Download the Tesseract installer from the official GitHub page:
    - **Download URL**: [Tesseract OCR Installer](https://github.com/UB-Mannheim/tesseract/wiki)
-2. Run the installer and select the default installation options. Tessaract should be installed in the following directory:
+2. Run the installer and select the default installation options. Tesseract should be installed in the following directory:
    - `C:\Users\<YourUsername>\AppData\Local\Programs\Tesseract-OCR\tesseract.exe`
 
 ### 3. Install Miniconda
