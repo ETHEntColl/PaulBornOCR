@@ -35,7 +35,7 @@ Before proceeding with the setup, ensure that you have the following files in a 
 - `paul_born_ocr.py`
 - `imgs/`
 
-You can download these files from the GitHub repository or from the **Born-Moser, Paul** directory on the **Google Drive** of the entomological collection.
+You can download the `PaulBornOCR` folder from the GitHub repository (Green `<> Code` Button in Top-Right -> `Download ZIP`) or from the **Born-Moser, Paul** directory on the **Google Drive** of the entomological collection.
 ### 1. Install PyCharm Community Edition
 PyCharm is an Integrated Development Environment (IDE) that makes it easier to manage your Python projects. Download and install **PyCharm Community Edition** from the official JetBrains website:
 
@@ -44,9 +44,7 @@ PyCharm is an Integrated Development Environment (IDE) that makes it easier to m
 #### Steps:
 1. Run the installer.
 2. Follow the on-screen instructions to complete the installation.
-3. During installation, you may want to select options such as:
-   - Add PyCharm to the system PATH.
-   - Create a desktop shortcut for easy access.
+3. If any additional configuration is required, select the default options.
 
 ### 2. Install Tesseract
 Tesseract is an open-source OCR engine that `pytesseract` relies on. You need to install it and make sure it is available in the default path.
