@@ -1,6 +1,6 @@
 # Paul Born OCR Project
 
-Welcome to the **paul_born_ocr** project! This document provides comprehensive installation and setup instructions to help you get started with the project. 
+Welcome to the **PaulBornOCR** project! This document provides comprehensive installation and setup instructions to help you get started with the project. 
 
 **Author**: Dustin Brunner (brunnedu@ethz.ch)
 
@@ -28,7 +28,7 @@ The purpose of this document is to guide users through the necessary prerequisit
 
 ### Prerequisites
 
-Before proceeding with the setup, ensure that you have the following files in a folder named **`paul_born_ocr`** located in your **Downloads** directory:
+Before proceeding with the setup, ensure that you have the following files in a folder named **`PaulBornOCR`** located in your **Downloads** directory:
 
 - `environment.yml`
 - `utils.py`
@@ -79,7 +79,7 @@ Miniconda is a lightweight version of Anaconda that lets you manage Python envir
 2. Navigate to the project directory containing the `environment.yml` file:
 
     ```bash
-    cd Users\<YourUsername>\Downloads\paul_born_ocr
+    cd Users\<YourUsername>\Downloads\PaulBornOCR
     ```
 
 3. Create the environment using the following command:
@@ -125,14 +125,15 @@ After running the script, check the console output to verify that all necessary 
 - The main monitor (where your Windows login appears) is used.
 
 ### Shortcuts
-The script provides several keyboard shortcuts for quickly navigating and entering data in the **Data Shot** software:
-- **Alt + 1**: Move to the next entry and pin the label.
-- **Alt + 2**: Move to the previous entry and pin the label.
-- **§ (Section Key)**: Fill in collection data for Paul Born-Moser specimens.
-- **Alt + §**: Show an input dialog for manual collection number entry.
-- **Alt + Q**: Perform OCR on the screen and paste the recognized text into the corresponding field.
 
-Additionally, clicking the middle mouse button will trigger the OCR process for the area around your mouse pointer.
+The script provides several keyboard shortcuts for quickly navigating and entering data in the **Data Shot** software:
+
+- **Alt + 1**: Move to the next specimen and zoom in on the pin labels.
+- **Alt + 2**: Move to the previous specimen and zoom in on the pin labels.
+- **Middle Mouse Click**: Automatically recognize the number on the Paul Born collection number label and copy it to the clipboard. (Ensure that the mouse is centered on the number before clicking.)
+- **§ (Section Key)**: Fill in the collection number from the clipboard and set the collection to "Born-Moser, Paul."
+- **Alt + §**: Show an input dialog for manual collection number entry if automatic recognition did not work.
+- **Alt + Q**: Automatically detect the position of the collection number on the screen. (This feature works about 50% of the time and is likely slower than moving the mouse to the collection number and clicking the middle mouse button.)
 
 ## Important Notes
 - Ensure that **Data Shot** is open on your primary monitor (the one where the Windows login screen appears). The script relies on screen coordinates and can fail if Data Shot is opened on a different monitor.
@@ -142,7 +143,7 @@ Additionally, clicking the middle mouse button will trigger the OCR process for 
 
 ## Troubleshooting
 
-If you encounter issues while setting up or running the `paul_born_ocr` project, consider the following solutions:
+If you encounter issues while setting up or running the `PaulBornOCR` project, consider the following solutions:
 
 ### Common Issues
 
