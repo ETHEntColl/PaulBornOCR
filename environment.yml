@@ -1,0 +1,17 @@
+name: data_entry_shortcuts  # Replace with your desired environment name
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - keyboard
+      - numpy
+      - pillow  # This includes the PIL package
+      - mouse
+      - pyautogui
+      - pytesseract
+      - pyperclip
+      - regex  # This includes the re package
+      - tk  # tkinter is usually included with Python, but explicitly specifying it
+      - opencv-python
