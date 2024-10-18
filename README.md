@@ -114,13 +114,12 @@ Miniconda is a lightweight version of Anaconda that lets you manage Python envir
 
 ### Run the Script
 1. Open the **Data Shot** software and load a specimen for data entry.
-2. Run the `paul_born_ocr.py` script from PyCharm by clicking **Run > Run 'paul_born_ocr'** or using **Shift + F10**.
-3. The script will detect on-screen elements and automate the data entry process.
-
-### Checking Coordinates
-After running the script, check the console output to verify that all necessary screen coordinates were detected. If a screen element is missing, ensure that:
-- The element is visible and properly loaded on your screen.
-- The main monitor (where your Windows login appears) is used.
+2. Open the `paul_born_ocr.py` script in PyCharm by navigating to the project directory and double-clicking the file.
+3. Run the script by clicking the green play button in the top-right corner of the PyCharm window or using the **Shift + F10** shortcut.
+4. Verify if the script correctly detected the screen elements and is ready to automate the data entry process.
+   - if there are any issues ensure that the **Data Shot** software is open on your primary monitor (the one where the Windows login screen appears) and that all necessary screen elements are visible.
+5. You can now use the keyboard shortcuts provided by the script to navigate and enter data in the **Data Shot** software.
+6. To stop the script, press the red square stop button in the PyCharm window or close the PyCharm window.
 
 ### Shortcuts
 
@@ -134,10 +133,20 @@ The script provides several keyboard shortcuts for quickly navigating and enteri
 - **Alt + Q**: Automatically detect the position of the collection number on the screen. (This feature works about 50% of the time and is likely slower than moving the mouse to the collection number and clicking the middle mouse button.)
 
 ## Important Notes
-- Ensure that **Data Shot** is open on your primary monitor (the one where the Windows login screen appears). The script relies on screen coordinates and can fail if Data Shot is opened on a different monitor.
+- Ensure that **Data Shot** is open on your primary monitor (the one where the Windows login screen appears). The script relies on screen coordinates and can fail if Data Shot is opened on a different monitor. You can change the primary monitor in your Windows display settings.
 - When running the OCR, verify that the correct data is captured, especially for numbers and labels, as OCR accuracy can vary depending on the clarity of the screen content.
-- You may need to adjust your screen layout or resolution to ensure all elements are detected properly.
 
+## Using the `auto.py` Script
+
+The `auto.py` script can be used to define custom keyboard shortcuts for automating data entry tasks. You can modify the script to include additional shortcuts or customize the existing ones to suit your workflow.
+You can activate and deactivate shortcuts to your liking by commenting or uncommenting the respective lines in the script (add/remove `#` at the beginning of the line to comment/uncomment the line).
+
+### Run the Script
+1. Open the `auto.py` script in PyCharm by navigating to the project directory and double-clicking the file.
+2. Run the script by clicking the green play button in the top-right corner of the PyCharm window or using the **Shift + F10** shortcut.
+3. The script will run in the background and listen for the defined keyboard shortcuts.
+4. Use the defined shortcuts to automate data entry tasks in the **Data Shot** software.
+5. To stop the script, press the red square stop button in the PyCharm window or close the PyCharm window.
 
 ## Troubleshooting
 
@@ -159,11 +168,7 @@ If you encounter issues while setting up or running the `PaulBornOCR` project, c
      - Add the Tesseract installation path:  
        `C:\Users\<YourUsername>\AppData\Local\Programs\Tesseract-OCR\`.
 
-3. **OCR Not Detecting Elements on the Screen**:
-   - Make sure that the **Data Shot** software is open on your primary monitor. The script relies on screen coordinates and may not function correctly if it is displayed on a different monitor.
-   - Check that the elements are visible and clearly loaded on the screen. Adjust your screen resolution if necessary.
-
-4. **Script Throws Errors or Fails to Run**:
+3. **Script Throws Errors or Fails to Run**:
    - Ensure that all dependencies in the `environment.yml` file are installed correctly. You can try recreating the environment using:  
      ```bash
      conda env remove -n data_entry_shortcuts
