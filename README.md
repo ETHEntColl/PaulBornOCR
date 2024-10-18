@@ -25,8 +25,6 @@ The purpose of this document is to guide users through the necessary prerequisit
    - [Common Issues](#common-issues)
    - [Additional Support](#additional-support)
 
-
-
 ### Prerequisites
 
 Before proceeding with the setup, ensure that you have the following files in a folder named **`PaulBornOCR`** located in your **Downloads** directory:
@@ -97,7 +95,7 @@ Miniconda is a lightweight version of Anaconda that lets you manage Python envir
    Launch PyCharm and open your project. Press **Ctrl + Alt + S** (Windows/Linux) or **Cmd + ,** (macOS) to open **Settings**. Alternatively, click the gear icon in the bottom-right corner.
 
 2. **Navigate to Python Interpreter**:  
-   In **Settings**, select **Project: <Your Project Name>** from the left sidebar, then click on **Python Interpreter**. Click **Add Interpreter** in the top-right corner.
+   In **Settings**, select **Project: PaulBornOCR** from the left sidebar, then click on **Python Interpreter**. Click **Add Interpreter** in the top-right corner.
 
 3. **Select Conda Environment**:  
    - In the **Add Python Interpreter** window, choose **Conda Environment** and select **Existing environment**.  
