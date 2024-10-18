@@ -17,10 +17,11 @@ The purpose of this document is to guide users through the necessary prerequisit
    - [Configure PyCharm](#2-configure-pycharm)
 3. [Using the `paul_born_ocr.py` Script](#using-the-paul_born_ocrpy-script)
    - [Run the Script](#run-the-script)
-   - [Checking Coordinates](#checking-coordinates)
    - [Shortcuts](#shortcuts)
-4. [Important Notes](#important-notes)
-5. [Troubleshooting](#troubleshooting)
+4. [Using the `auto.py` Script](#using-the-autopy-script)
+   - [Run the Script](#run-the-script-1)
+5. [Important Notes](#important-notes)
+6. [Troubleshooting](#troubleshooting)
    - [Common Issues](#common-issues)
    - [Additional Support](#additional-support)
 
@@ -30,10 +31,11 @@ The purpose of this document is to guide users through the necessary prerequisit
 
 Before proceeding with the setup, ensure that you have the following files in a folder named **`PaulBornOCR`** located in your **Downloads** directory:
 
-- `environment.yml`
-- `utils.py`
-- `paul_born_ocr.py`
-- `imgs/`
+- `environment.yml`: This file contains the dependencies required for the project.
+- `utils.py`: This script contains utility functions used by the `paul_born_ocr.py` and `auto.py` scripts.
+- `paul_born_ocr.py`: This script speeds up Paul Born data entry tasks in the **Data Shot** software using Optical Character Recognition (OCR).
+- `auto.py`: This script can be used to define custom keyboard shortcuts for automating data entry tasks in the **Data Shot** software.
+- `imgs/`: This directory contains images of the screen elements used for detecting their coordinates.
 
 You can download the `PaulBornOCR` folder from the GitHub repository (Green `<> Code` Button in Top-Right -> `Download ZIP`) or from the **Born-Moser, Paul** directory on the **Google Drive** of the entomological collection.
 ### 1. Install PyCharm Community Edition
@@ -132,8 +134,7 @@ The script provides several keyboard shortcuts for quickly navigating and enteri
 - **Alt + §**: Show an input dialog for manual collection number entry if automatic recognition did not work.
 - **Alt + Q**: Automatically detect the position of the collection number on the screen. (This feature works about 50% of the time and is likely slower than moving the mouse to the collection number and clicking the middle mouse button.)
 
-## Important Notes
-- Ensure that **Data Shot** is open on your primary monitor (the one where the Windows login screen appears). The script relies on screen coordinates and can fail if Data Shot is opened on a different monitor. You can change the primary monitor in your Windows display settings.
+### Important Notes
 - When running the OCR, verify that the correct data is captured, especially for numbers and labels, as OCR accuracy can vary depending on the clarity of the screen content.
 
 ## Using the `auto.py` Script
@@ -174,6 +175,9 @@ If you encounter issues while setting up or running the `PaulBornOCR` project, c
      conda env remove -n data_entry_shortcuts
      conda env create -f environment.yml
      ```
+   - Ensure that **Data Shot** is open on your primary monitor (the one where the Windows login screen appears). The script relies on screen coordinates and can fail if Data Shot is opened on a different monitor. You can change the primary monitor in your Windows display settings.
+
+     
 
 ### Additional Support
 
