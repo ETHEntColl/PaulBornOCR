@@ -213,4 +213,5 @@ def perform_actions_sex(sex):
 def perform_actions_workflow_status(status):
     # write_with_clipboard(status, input_field_from_label('workflow_status.png'))
     write_with_clipboard(status, 'workflow_status')
+    pyautogui.press('enter')
 
