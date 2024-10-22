@@ -173,9 +173,7 @@ def perform_save():
     pyautogui.hotkey('alt', 's')
 
 def perform_actions_collection(collection_name):
-    pyautogui.click(COORDINATES['collection'])
-    pyperclip.copy(collection_name)
-    pyautogui.hotkey('ctrl', 'v')
+    write_with_clipboard(collection_name, 'collection')
     pyautogui.press('enter')
 
 def perform_actions_collector(text_to_type):
