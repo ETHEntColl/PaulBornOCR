@@ -1,30 +1,21 @@
 import random
-import random
 import re
-import time
 import tkinter as tk
 
 import keyboard
 import mouse
 import numpy as np
 from PIL import ImageGrab
-from PIL.ImImagePlugin import number
-from setuptools.config.setupcfg import configuration_to_dict
 
 from utils import *
 
+# Tesseract OCR configuration
+set_tesseract_path(username=None)  # Set the Tesseract path, if it doesn't work automatically, specify the username
 custom_config = r'--oem 3 --psm 6 outputbase digits'
 
 # Determine screen coordinates
-verbose = True
-
-COORDINATES['tag_approximate'] = (COORDINATES['pinlabels'][0]+250, COORDINATES['pinlabels'][1]+260)
-
-if verbose:
-    print("Coordinates:")
-    for k, v in COORDINATES.items():
-        print(f'{k}: {v}')
-    print('-' * 40)
+SA = ScreenAutomation(add_determination=False, verbose=True)
+SA.coordinates['tag_approximate'] = (SA.coordinates['pinlabels'][0]+250, SA.coordinates['pinlabels'][1]+260)
 
 def clean_text(text):
     # Step 1: Remove all non-numeric characters except for "("
@@ -247,9 +238,9 @@ def show_input_dialog():
 def perform_paul_born():
     # Perform the actions for Paul Born
     number = pyperclip.paste()
-    perform_actions_numbers_more(number, "Collection Number")
-    perform_actions_collection("Born-Moser, Paul (1859-1928)")
-    perform_save()
+    SA.perform_numbers_more(number, "Collection Number")
+    SA.perform_collection("Born-Moser, Paul (1859-1928)")
+    SA.perform_save()
 
 def perform_auto_locate_ocr(confidence=0.5, verbose=True):
     center = locate_and_average_centers(confidence=confidence, verbose=verbose)
@@ -260,8 +251,8 @@ def perform_auto_locate_ocr(confidence=0.5, verbose=True):
 
 
 # HOTKEYS
-keyboard.add_hotkey('alt+2', perform_previous, args=(COORDINATES['tag_approximate'], True))
-keyboard.add_hotkey('alt+1', perform_next, args=(COORDINATES['tag_approximate'], True))
+keyboard.add_hotkey('alt+2', SA.perform_previous, args=('tag_approximate', True))
+keyboard.add_hotkey('alt+1', SA.perform_next, args=('tag_approximate', True))
 keyboard.add_hotkey('§', perform_paul_born)
 keyboard.add_hotkey('alt+§', show_input_dialog)  # New hotkey for manual number input
 keyboard.add_hotkey('alt+q', perform_auto_locate_ocr)
