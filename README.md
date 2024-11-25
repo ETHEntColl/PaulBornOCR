@@ -37,9 +37,9 @@ Before proceeding with the setup, ensure that you have the following files in a 
 
 You can download the `PaulBornOCR` folder from the GitHub repository (Green `<> Code` Button in Top-Right -> `Download ZIP`) or from the **Born-Moser, Paul** directory on the **Google Drive** of the entomological collection.
 ### 1. Install PyCharm Community Edition
-PyCharm is an Integrated Development Environment (IDE) that makes it easier to manage your Python projects. Download and install **PyCharm Community Edition** from the official JetBrains website:
+PyCharm is an Integrated Development Environment (IDE) that makes it easier to manage your Python projects. 
 
-- **Download URL**: [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/)
+- **Download URL**: [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/) (**Important:** Scroll down to the **Community Edition** don't download the paid **Professional Edition**)
 
 #### Steps:
 1. Run the installer.
@@ -60,7 +60,7 @@ Miniconda is a lightweight version of Anaconda that lets you manage Python envir
 
 #### Steps:
 1. Download Miniconda from the official website:
-   - **Download URL**: [Miniconda Installer](https://docs.conda.io/en/latest/miniconda.html)
+   - **Download URL**: [Miniconda Download Page](https://www.anaconda.com/download) (**Important:** If prompted, choose **"Skip registration"** then scroll down to the **Miniconda Installers** section and download the **Windows** version)
 2. Run the installer and select the default installation options. Miniconda should be installed in the following directory:
    - `C:\Users\<YourUsername>\AppData\Local\miniconda3`
 3. Once installed, open the **Anaconda Prompt (miniconda3)** from the Windows Start Menu and verify the installation by typing:
