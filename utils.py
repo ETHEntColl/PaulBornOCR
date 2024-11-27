@@ -222,6 +222,8 @@ class ScreenAutomation:
     def perform_previous(self, position_after=None, pinlabels=True):
         if position_after is None:
             position_after = pyautogui.position()
+        elif isinstance(position_after, str):
+            position_after = self.coordinates[position_after]
         pyautogui.click(self.coordinates['previous'])
         if pinlabels:
             pyautogui.click(self.coordinates['pinlabels'])
@@ -230,6 +232,8 @@ class ScreenAutomation:
     def perform_next(self, position_after=None, pinlabels=True):
         if position_after is None:
             position_after = pyautogui.position()
+        elif isinstance(position_after, str):
+            position_after = self.coordinates[position_after]
         pyautogui.click(self.coordinates['next'])
         if pinlabels:
             pyautogui.click(self.coordinates['pinlabels'])
